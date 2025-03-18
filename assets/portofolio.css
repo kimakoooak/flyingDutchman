@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ffff;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.project-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project {
+  margin-bottom: 20px;
+  width: 90%;
+  height: auto;
+}
+
+.project.featured {
+  width: 90%;
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.image1 {
+  background-image: url("../assets/images/card.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.image2 {
+  background-image: url("../assets/images/card2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.image3 {
+  background-image: url("../assets/images/card3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.image4 {
+  background-image: url("../assets/images/card4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.image5 {
+  background-image: url("../assets/images/card5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.project.featured .project-image {
+  height: 280px;
+}
+
+.project-title {
+  padding: 12px 5px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.selected-works {
+  width: 90%;
+  margin-bottom: 15px;
+}
+
+.selected-works h2 {
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+.selected-works p {
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+.view-all {
+  text-align: center;
+  margin-top: 20px;
+  width: 90%;
+}
+
+/* From Uiverse.io by cssbuttons-io */
+.fancy {
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 1em 1.5em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+}
+
+.fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: black;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+.fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+  color: white;
+  background: black;
+}
+
+.fancy:hover::before {
+  width: 0.9375rem;
+  background: white;
+}
+
+.fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+}
+
+/* MOBILE */
+@media (min-width: 768px) {
+  .project-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: block;
+    padding: 20px;
+    scrollbar-width: none;
+  }
+
+  .project {
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    margin-right: 20px;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 0;
+  }
+
+  .project.featured {
+    width: 600px;
+  }
+
+  .project-image {
+    height: 350px;
+  }
+
+  .project.featured .project-image {
+    height: 450px;
+  }
+
+  .view-all {
+    width: 98%;
+    margin-right: 30px;
+  }
+
+  .fancy {
+    display: inline-block;
+    float: right;
+    width: auto;
+  }
+
+  .selected-works {
+    width: 98%;
+  }
+}
